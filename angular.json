@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PokusTimer"
+    }
+  },
+  "defaultProject": "PokusTimer",
+  "cli": {
+    "analytics": "114b4cc1-f4ca-4b1e-8c16-4b09ace73eac"
+  }
 }
