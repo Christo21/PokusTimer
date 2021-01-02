@@ -1,0 +1,19 @@
+<h1>Timer</h1>
+<hr>
+<p>Is Auto Start Timer : {{timer.isAutoStartTimer}}</p>
+<p>Is Auto Start Break : {{timer.isAutoStartBreak}}</p>
+<p>Is Loop : {{timer.isLoop}}</p>
+<p>Long Break Interval : {{timer.longBreakInterval}}</p>
+<p>Round : {{timer.countRound}}</p>
+<p>Session : {{timer.countLoop}}</p>
+<hr>
+<div *ngIf="!isShortBreak && !isLongBreak">Let's Start</div>
+<div *ngIf="isShortBreak">Short Break for {{timer.shortBreakMinutes}} Minutes, {{timer.shortBreakSeconds}} Seconds</div>
+<div *ngIf="isLongBreak">Long Break for {{timer.longBreakMinutes}} Minutes, {{timer.longBreakSeconds}} Seconds</div>
+<hr>
+<h2>{{minutes | number:'2.0' }}</h2>
+<h2>{{seconds | number:'2.0' }}</h2>
+<button (click)='start()'>Start</button>
+<button (click)='pause()'>Pause</button>
+<button (click)='stop()'>Stop</button>
+<button (click)='resetAll()'>Reset</button>
